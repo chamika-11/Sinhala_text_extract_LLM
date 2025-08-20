@@ -30,7 +30,6 @@ try:
     import numpy as np
 except ImportError as e:
     print(f"Missing required library: {e}")
-    print("Please install with: pip install transformers accelerate torch pillow numpy")
     exit(1)
 
 # Configure logging
@@ -64,48 +63,45 @@ class SinhalaTextRecognizer:
             Dictionary mapping class ID to Sinhala character
         """
         id_to_sinhala = {
-            # Vowels
-            1: "අ",    # a
-            2: "ආ",    # aa
-            3: "ඇ",    # ae
-            4: "ඈ",    # aae
-            5: "ඉ",    # i
-            6: "ඊ",    # ii
-            7: "උ",    # u
-            8: "ඌ",    # uu
-            9: "ඍ",    # ri
-            10: "ඎ",   # rii
-            11: "ඏ",   # lu
-            12: "ඐ",   # luu
-            13: "එ",   # e
-            14: "ඒ",   # ee
-            15: "ඓ",   # ai
-            16: "ඔ",   # o
-            17: "ඕ",   # oo
-            18: "ඖ",   # au
-            
-            # Consonants
-            19: "ක",   # ka
-            20: "ඛ",   # kha
-            21: "ග",   # ga
-            22: "ඝ",   # gha
-            23: "ඞ",   # nga
-            24: "ච",   # cha
-            25: "ඡ",   # chha
-            26: "ජ",   # ja
-            27: "ඣ",   # jha
-            28: "ඤ",   # nya
-            29: "ට",   # tta
-            30: "ඨ",   # ttha
-            31: "ඩ",   # dda
-            32: "ඪ",   # ddha
-            33: "ණ",   # nna
-            34: "ත",   # ta
-            35: "ථ",   # tha
-            36: "ද",   # da
-            37: "ධ",   # dha
-            38: "න",   # na
-            39: "ප"    # pa
+            1: "අ",    
+            2: "ආ",    
+            3: "ඇ",    
+            4: "ඈ",    
+            5: "ඉ",    
+            6: "ඊ",   
+            7: "උ",   
+            8: "ඌ",    
+            9: "ඍ",    
+            10: "ඎ",   
+            11: "ඏ",   
+            12: "ඐ",   
+            13: "එ",  
+            14: "ඒ",   
+            15: "ඓ",  
+            16: "ඔ",   
+            17: "ඕ",   
+            18: "ඖ",   
+            19: "ක",   
+            20: "ඛ",   
+            21: "ග",   
+            22: "ඝ",   
+            23: "ඞ",  
+            24: "ච",   
+            25: "ඡ",   
+            26: "ජ", 
+            27: "ඣ",  
+            28: "ඤ",  
+            29: "ට",   
+            30: "ඨ",   
+            31: "ඩ",  
+            32: "ඪ",   
+            33: "ණ",  
+            34: "ත",   
+            35: "ථ",   
+            36: "ද",   
+            37: "ධ",   
+            38: "න",   
+            39: "ප"    
         }
         
         logger.info(f"Created class mapping for {len(id_to_sinhala)} Sinhala characters")
@@ -377,12 +373,12 @@ def run_model(image_path: str) -> List[Dict]:
     
     # Dummy detections for testing - replace with your model
     dummy_detections = [
-        {"x": 50, "y": 100, "class": 1, "confidence": 0.95},   # අ
-        {"x": 90, "y": 102, "class": 19, "confidence": 0.93},  # ක
-        {"x": 140, "y": 98, "class": 34, "confidence": 0.91},  # ත
-        {"x": 200, "y": 101, "class": 38, "confidence": 0.89}, # න
-        {"x": 50, "y": 150, "class": 13, "confidence": 0.87},  # එ (new line)
-        {"x": 90, "y": 152, "class": 19, "confidence": 0.85},  # ක
+        {"x": 50, "y": 100, "class": 1, "confidence": 0.95},  
+        {"x": 90, "y": 102, "class": 19, "confidence": 0.93}, 
+        {"x": 140, "y": 98, "class": 34, "confidence": 0.91},  
+        {"x": 200, "y": 101, "class": 38, "confidence": 0.89}, 
+        {"x": 50, "y": 150, "class": 13, "confidence": 0.87},  
+        {"x": 90, "y": 152, "class": 19, "confidence": 0.85},  
     ]
     
     return dummy_detections
