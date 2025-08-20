@@ -1,0 +1,47 @@
+{
+  "raw_text": "අක ත න\nඑක",
+  "corrected_text": "   ",
+  "detection_count": 6,
+  "detections": [
+    {
+      "x": 50,
+      "y": 100,
+      "class": 1,
+      "confidence": 0.95
+    },
+    {
+      "x": 90,
+      "y": 102,
+      "class": 19,
+      "confidence": 0.93
+    },
+    {
+      "x": 140,
+      "y": 98,
+      "class": 34,
+      "confidence": 0.91
+    },
+    {
+      "x": 200,
+      "y": 101,
+      "class": 38,
+      "confidence": 0.89
+    },
+    {
+      "x": 50,
+      "y": 150,
+      "class": 13,
+      "confidence": 0.87
+    },
+    {
+      "x": 90,
+      "y": 152,
+      "class": 19,
+      "confidence": 0.85
+    }
+  ],
+  "settings": {
+    "word_gap_threshold": 40,
+    "line_gap_threshold": 30
+  }
+}
